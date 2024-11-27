@@ -1,45 +1,37 @@
-# Explicação Detalhada
+# Título da Atividade: Criação de um Site para uma Lanchonete
 
-### `document.querySelectorAll('.btn-pedido')`
-- Seleciona todos os elementos que possuem a classe `btn-pedido` no documento HTML.
-- Retorna uma lista (NodeList) de elementos.
+## Objetivo
 
-### `.forEach(button => {...})`
-- Itera sobre cada elemento da lista retornada pelo `querySelectorAll`.
-- Para cada botão (`button`), executa o código dentro da função.
+Criar um site simples para uma lanchonete que contenha:
 
-### `button.addEventListener('click', () => {...})`
-- Adiciona um evento do tipo `click` ao botão atual.
-- Quando o botão for clicado, a função anônima será executada.
+### **Página Inicial (HTML)**
+- Nome da lanchonete e uma breve descrição.
+- Lista de lanches com imagens, descrições e preços.
+- Botão para "Fazer Pedido" em cada item.
 
-### `button.getAttribute('data-preco')`
-- Obtém o valor do atributo `data-preco` do botão.
-- Esse atributo é usado para armazenar o preço do item diretamente no HTML.
+### **Estilo Básico (CSS)**
+- Torne o site visualmente agradável e responsivo.
+- Utilize cores consistentes e destaque para os botões.
 
-### `parseFloat(...)`
-- Converte o valor do atributo `data-preco` (que é uma string) em um número decimal.
-
-### `button.parentElement.querySelector('h2')`
-- Encontra o elemento `<h2>` dentro do contêiner pai do botão.
-- Isso funciona porque o botão e o título (`<h2>`) do lanche estão no mesmo nível hierárquico no HTML.
-
-### `textContent`
-- Captura o texto que está dentro do elemento `<h2>`, que no caso é o nome do lanche.
-
-### `alert(...)`
-- Exibe uma caixa de diálogo com uma mensagem.
-- Usa *template literals* (entre crases ``) para interpolar o nome do lanche e o preço no texto.
-- O método `toFixed(2)` garante que o preço seja exibido com duas casas decimais, padrão para valores monetários.
+### **Funcionalidade Interativa (JavaScript)**
+- Exiba um alerta ou modal confirmando o pedido ao clicar em "Fazer Pedido".
+- Simule o cálculo do valor total dos pedidos.
 
 ---
 
-## Funcionamento Prático
+## Requisitos
 
-Quando o usuário clica em um botão de "Fazer Pedido":
-1. O script identifica qual botão foi clicado.
-2. Recupera o preço e o nome do lanche associados a esse botão.
-3. Exibe uma mensagem ao usuário confirmando o pedido, mostrando o nome e o preço do lanche.
+### **HTML**
+- Usar tags semânticas como `<header>`, `<main>`, `<footer>`, `<section>` e `<article>`.
+- Incluir imagens dos lanches.
+- Criar links de navegação no cabeçalho.
 
+### **CSS**
+- Personalizar o layout usando **Flexbox** ou **Grid**.
+- Usar um esquema de cores (por exemplo, tons de amarelo e vermelho para o tema de lanchonete).
+- Adicionar efeitos de *hover* nos botões.
 
-
-https://ricardoloureirosoares.github.io/lanchonete-site/
+### **JavaScript**
+- Criar uma função para capturar cliques nos botões de "Fazer Pedido".
+- Exibir uma mensagem no console ou em um modal com o nome do lanche escolhido.
+- Implementar um sistema básico de soma dos valores dos lanches selecionados.
